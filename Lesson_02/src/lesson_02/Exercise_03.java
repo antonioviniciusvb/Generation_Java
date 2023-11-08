@@ -1,3 +1,6 @@
+//Developer: Antonio Bandeira
+//Data: 08/11/2023
+
 package lesson_02;
 
 import java.util.Scanner;
