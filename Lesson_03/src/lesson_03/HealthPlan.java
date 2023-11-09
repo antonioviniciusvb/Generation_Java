@@ -7,7 +7,7 @@ public class HealthPlan {
 	public static void main(String[] args) {
 
 		String name;
-		int age = 0;
+		char ageRange = 0;
 		double costPlan = 0d;
 
 		Scanner read = new Scanner(System.in);
@@ -15,29 +15,55 @@ public class HealthPlan {
 		System.out.println("What is your name?");
 		name = read.nextLine();
 
-		System.out.println("How old are you?");
-		age = read.nextInt();
+		showTableRange();
 
-		if (age > 0 && age <= 10) {
+		System.out.println("Enter your age group code");
+		ageRange = read.next().charAt(0);
+
+		switch (ageRange) {
+		case '1':
 			costPlan = 100;
-		} else if (age > 10 && age <= 29) {
+			break;
+		case '2':
 			costPlan = 200;
-		} else if (age > 29 && age <= 45) {
+			break;
+		case '3':
 			costPlan = 300;
-		} else if (age > 45 && age <= 59) {
+			break;
+		case '4':
 			costPlan = 500;
-		} else if (age > 59 && age <= 65) {
+			break;
+		case '5':
 			costPlan = 600;
-		} else if (age > 65 && age <= 130) {
+			break;
+		case '6':
 			costPlan = 1000;
-		} else {
-			System.out.println("Age must be greater than 0 and less than 130.");
+			break;
+		default:
+			System.out.println("Invalid option");
+
+		}
+		
+		// Show Cost Health Plan 
+		if (costPlan > 0) {
+			System.out.println(name);
+			System.out.printf("Your cost health plan is %.2f", costPlan);
 		}
 
-		if (costPlan > 0)
-			System.out.printf("%s, cost health plan is %.2f", name, costPlan);
-
 		read.close();
+
+	}
+
+	public static void showTableRange() {
+
+		System.out.println("Age range");
+		System.out.println("1- Less 10 years old");
+		System.out.println("2- 11 to 29 years old");
+		System.out.println("3- 30 to 45 years old");
+		System.out.println("4- 46 to 59 years old");
+		System.out.println("5- 60 to 65 years old");
+		System.out.println("6- Over 65 years old");
+		System.out.println();
 
 	}
 
