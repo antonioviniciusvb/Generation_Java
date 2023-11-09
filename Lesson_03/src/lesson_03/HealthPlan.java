@@ -33,8 +33,9 @@ public class HealthPlan {
 		} else {
 			System.out.println("Age must be greater than 0 and less than 130.");
 		}
-		
-		System.out.printf("%s, cost health plan is %.2f", name, costPlan);
+
+		if (costPlan > 0)
+			System.out.printf("%s, cost health plan is %.2f", name, costPlan);
 
 		read.close();
 
