@@ -1,6 +1,5 @@
 package lesson_03;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Exercise_04 {
