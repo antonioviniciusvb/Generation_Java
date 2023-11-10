@@ -11,7 +11,9 @@ public class Research {
 		int countBasketBall = 0, countOthers = 0;
 		String flag = "y";
 		
-		while(flag.equalsIgnoreCase("y")) {
+		
+		do {
+	
 			System.out.println("How old are you?");
 			years = read.nextInt();
 			
@@ -30,11 +32,9 @@ public class Research {
 			
 			if(sport == 4)
 				countOthers++;
-			
-			System.out.println("Do you want to continue (y/n)?");
-			read.skip("\\R");
-			flag = read.nextLine();
-		}
+	
+		
+		}while(sport > 0 && sport < 3);
 		
 		
 		System.out.printf("Like Soccer: %d\n", countSoccer);
