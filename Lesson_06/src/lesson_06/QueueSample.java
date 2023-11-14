@@ -33,6 +33,7 @@ public class QueueSample {
 		System.out.println(queue.contains("Antonio"));
 		
 		System.out.printf("Queue Size: %d", queue.size());
+		
 	}
 
 }
