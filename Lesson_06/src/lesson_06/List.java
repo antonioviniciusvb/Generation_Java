@@ -1,3 +1,5 @@
+package lesson_06;
+
 import java.util.ArrayList;
 
 public class List {
@@ -31,6 +33,7 @@ public class List {
 		System.out.println(numbers);
 
 		numbers.forEach(System.out::println);
+		
 		numbers.forEach((n) -> System.out.println(n+1));
 		
 		numbers.clear();
