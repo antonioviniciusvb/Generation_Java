@@ -1,8 +1,6 @@
 package lesson_08;
 
-import java.time.LocalDate;
 
-import lesson_08.util.Converter;
 import lesson_08.util.Text;
 
 public class Client {
@@ -11,19 +9,28 @@ public class Client {
 	private int id;
 	private String firstName;
 	private String lastName;
-	private LocalDate dateOfBirth;
+	private Address address;
 	private String cellPhone;
 	private String email;
 
-	public Client(String firstName, String lastName, LocalDate dateOfBirth, String cellPhone, String email) {
-
+	public Client(String firstName, String lastName, Address address, String cellPhone, String email) {
+		
 		this.id = ++quantityOfClients;
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.dateOfBirth = dateOfBirth;
+		this.address = new Address(address.getStreet(), address.getNumber(), address.getComplement(),
+				address.getNeighborhood(), address.getCity(),address.getState(), address.getCountry(),
+				address.getUf(), address.getZipCode());
 		this.cellPhone = cellPhone;
 		this.email = email;
+	}
 
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
 	}
 
 	public int getId() {
@@ -47,14 +54,6 @@ public class Client {
 		this.lastName = lastName;
 	}
 
-	public LocalDate getDateOfBirth() {
-		return dateOfBirth;
-	}
-
-	public void setDateOfBirth(LocalDate dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
-	}
-
 	public String getCellPhone() {
 		return cellPhone;
 	}
@@ -76,7 +75,6 @@ public class Client {
 		return Text.padRight("Id:", 15) + String.format("%d\n", this.id) + Text.padRight("First Name:", 15)
 				+ String.format("%s\n", this.firstName) + Text.padRight("Last Name:", 15)
 				+ String.format("%s\n", this.lastName) + Text.padRight("Date of Birth:", 15)
-				+ this.dateOfBirth.format(Converter.formatter) + "\n" + Text.padRight("CellPhone:", 15)
 				+ String.format("%s\n", this.cellPhone) + Text.padRight("Email:", 15)
 				+ String.format("%s\n", this.email);
 	}
