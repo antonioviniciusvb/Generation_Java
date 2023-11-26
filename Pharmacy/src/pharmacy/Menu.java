@@ -123,12 +123,12 @@ public class Menu {
 	}
 
 	public static void showAboutProgram() {
-		System.out.println(Colors.theme + "o-------------------------------------------------------o");
-		System.out.println("| Project: Pharmacy                                     |");
-		System.out.println("| https://github.com/antonioviniciusvb/Bank_Account.git |");
-		System.out.println("| Developed by: Antonio Bandeira                        |");
-		System.out.println("| Generation Brasil - generation@generation.org         |");
-		System.out.println("o-------------------------------------------------------o");
+		System.out.println(Colors.theme + "o-------------------------------------------------------------------o");
+		System.out.println("| Project: Pharmacy                                                 |");
+		System.out.println("| https://github.com/antonioviniciusvb/Generation_Java.git/pharmacy |");
+		System.out.println("| Developed by: Antonio Bandeira                                    |");
+		System.out.println("| Generation Brasil - generation@generation.org                     |");
+		System.out.println("o-------------------------------------------------------------------o");
 	}
 
 }
